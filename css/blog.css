@@ -1,0 +1,9 @@
+@import url(general.css);
+.blogPresentationSection {
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--color-bg-warm);
+}
