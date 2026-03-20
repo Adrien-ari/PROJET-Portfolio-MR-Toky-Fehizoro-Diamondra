@@ -1,4 +1,5 @@
 @import url(general.css);
+
 .blogPresentationSection {
     height: 40vh;
     display: flex;
@@ -6,4 +7,49 @@
     justify-content: center;
     flex-direction: column;
     background-color: var(--color-bg-warm);
+}
+
+.mainContentBlog {
+    padding-inline: calc(var(--padding) * 3);
+}
+.postContentContainerCommonClass {
+    display: flex;
+    align-items: center;
+    padding: var(--padding);
+    gap: 1rem;
+    width: 70%;
+}
+.postImage {
+    background-color: var(--color-red);
+    border-radius: var(--border-radius);
+
+}
+.commonPostContent {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+
+.commmonTagsClass {
+    display: flex;
+    gap: 10px;
+    padding: calc(var(--padding) / 2);
+}
+
+.commmonTagsClass p {
+    background-color: rgb(29, 194, 235);
+    padding-block: calc(var(--padding) / 5);
+    padding-inline: calc(var(--padding) /2);
+    color: var(--color-text-white);
+    border-radius: calc(var(--border-radius) * 2);
+    font-size: var(--min-font-size);
+
+}
+
+.CommonTitleDateContainer {
+    display: flex;
+    gap: 1rem;
 }
