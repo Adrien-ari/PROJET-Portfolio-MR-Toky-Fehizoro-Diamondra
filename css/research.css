@@ -63,18 +63,6 @@
     gap: 3rem;
 
 }
-.titlePart{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    font-family: var(--font-family-title);
-    flex-direction: row;
-}
-.titlePart  p{
-    text-transform: uppercase;
-    color: var(--color-text-muted);
-}
 
 .tagsContainer0,
 .tagsContainer1,
