@@ -24,8 +24,8 @@
 
 .descriptionResearch {
     width: 30%;
-    text-align: center;
-    font-size: var(--min-font-size);
+    text-align: justify;
+    font-size:16px;
     color: var(--color-text-muted);
 }
 
@@ -44,8 +44,14 @@
 .academicPaper1,
 .academicPaper2 {
     width: 60%;
-    border: 1px solid var(--color-text-dark);
-    padding: 1rem;
+    border: 2px solid var(--color-bg-warm);
+    border-radius: 5px;
+    padding: 1.5rem;
+}
+.academicPaper0:hover,
+.academicPaper1:hover,
+.academicPaper2:hover {
+   box-shadow: 2px 2px 2px var(--color-bg-warm);
 }
 
 .tagsAndPublished0,
@@ -54,16 +60,21 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 3rem;
+
 }
 
 .tagsContainer0,
 .tagsContainer1,
 .tagsContainer2 {
     display: flex;
+    padding: 0.25rem;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 0.5rem;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    text-wrap: nowrap;
 }
 
 .tags0,
@@ -81,6 +92,47 @@
 .buttonCTA {
     border-radius: calc(var(--border-radius) * 2);
 }
+.researchTitle{
+    font-weight: bold;
+    padding-block: 1.5rem;
+    font-size: 20px;
+}
+.researchPDF0,
+.researchPDF1,
+.researchPDF2 {
+    color: var(--color-red);
+    font-weight: bold;
+}
+.researchAbstractContainer0,
+.researchAbstractContainer1,
+.researchAbstractContainer2 {
+    font-family: display;
+    padding-block: 2rem;
+    color: var(--color-text-muted);
+    margin-block: 1rem;
+    border-bottom: 1px solid var(--color-bg-warm);
+}
+.researchAuthor0,
+.researchAuthor1,
+.researchAuthor2 {
+    color: var(--color-text-muted);
+    font-size: 14px;
+}
+.researchJournal0,
+.researchJournal1,
+.researchJournal2 {
+    color: var(--color-text-muted);
+    font-size: 14px;
+    font-style: italic;
+}
+.researchAuthorJournalContainer1,
+.researchAuthorJournalContainer2 ,
+.researchAuthorJournalContainer0 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
 
 /* responsive by diams */
 @media (max-width: 767px) {
@@ -97,6 +149,7 @@
 
   .descriptionResearch {
     width: 100%;
+   
   }
 
   .academicPaper0,

@@ -155,8 +155,9 @@ footer {
 
 .textIncitationFooter {
   color: var(--color-text-white);
-  font-size: var(--min-font-size);
+  font-size: 16px;
 }
+
 
 .buttonCTA {
   background-color: var(--color-red);
@@ -168,10 +169,14 @@ footer {
   transition: background-color 100ms ease-in-out;
 }
 
-.buttonCTA:hover {
+.buttonCTA:hover  {
   background-color: var(--color-bg-warm);
   color: var(--color-red);
 
+}
+.buttonCTA a {
+    color: inherit;
+    text-decoration: none;
 }
 
 .textIncitationFooter {
@@ -179,8 +184,28 @@ footer {
   text-align: center;
   color: var(--color-text-white);
 }
+.titlePart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-family: var(--font-family-title);
+    flex-direction: row;
+    margin-block: 1rem;
+}
+.titlePart  p{
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+}
+hr{
+  background-color: var(--color-red);
+  width: 50px;
+  height: 3px;
+  border-radius: 10px;
+  border: none;
+}
 
-/* Respon by diams */
+
 .burger {
   display: none;
   flex-direction: column;
@@ -244,22 +269,29 @@ footer {
   border-bottom: 1px solid rgba(255,255,255,0.1);
   transition: background 0.3s ease, padding-left 0.3s ease;
 }
-.mobile-menu a:last-child { border-bottom: none; }
-.mobile-menu a:hover { background: rgba(255,255,255,0.1); padding-left: 1rem; }
+.mobile-menu a:last-child { 
+  border-bottom: none; 
+  z-index: 999;
+}
+.mobile-menu a:hover { 
+  background: rgba(255,255,255,0.1); padding-left: 1rem; 
+}
 
 .overlay {
   display: none;
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.4);
-  z-index: 98;
+  z-index: 999;
 }
 .overlay.visible { display: block; }
-
+/* Respon by diams */
 @media (max-width: 767px) {
   .navigation        { display: none; }
   .search_and_panier { display: none; }
   .burger            { display: flex; }
+
+ 
 
 
   footer {
@@ -275,4 +307,8 @@ footer {
   .incitationQuestionFooter {
     font-size: 1.3rem;
   }
+}
+ .brandName  img{
+  aspect-ratio: 1/0.25;
+  width: 30vw;
 }
