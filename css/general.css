@@ -58,15 +58,12 @@ header {
   padding: calc(var(--padding) / 2);
 }
 
-.brandName {
-  background-image: url(/images/logo.png);
-  background-repeat: no-repeat;
-  background-position: 20% 60%;
-  background-size: cover;
-  height: 2rem;
+.brandName  img{
+  aspect-ratio: 1/0.5;
   width: 10vw;
 
 }
+
 
 .navigation ul {
   list-style: none;

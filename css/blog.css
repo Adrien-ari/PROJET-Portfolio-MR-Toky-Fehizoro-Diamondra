@@ -117,3 +117,35 @@
 .displayNothing {
     display: none;
 }
+
+/* Ajout de page par diamondra */
+@media (max-width: 767px) {
+
+  .blogPresentationSection {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .blogPresentationSection h1 {
+    font-size: 2rem;
+  }
+
+  .blogPresentationSection p {
+    font-size: 0.85rem;
+    padding-inline: 1rem;
+  }
+
+  .mainContentBlog {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 1rem;
+  }
+
+  .blogPostsSection {
+    width: 100%;
+  }
+
+  .blogAdditifContent {
+    width: 100%;
+  }
+}
