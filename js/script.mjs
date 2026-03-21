@@ -46,52 +46,75 @@ homeCourseSectionCourseClass.forEach((element) => {
 });
 
 let coursesElementsClass = [
-    {
-        tag:"developmentTag",
-        title:"developmentTitle",
-        durationMode:"developmentDurationAndMode"
-    },
-    {
-        tag:"translationTag",
-        title:"translationTitle",
-        durationMode:"translationDurationAndMode"
-    },
-    {
-        tag:"researchTag",
-        title:"researchTitle",
-        durationMode:"researchDurationAndMode"
-    },
+  {
+    tag: "developmentTag",
+    title: "developmentTitle",
+    durationMode: "developmentDurationAndMode",
+  },
+  {
+    tag: "translationTag",
+    title: "translationTitle",
+    durationMode: "translationDurationAndMode",
+  },
+  {
+    tag: "researchTag",
+    title: "researchTitle",
+    durationMode: "researchDurationAndMode",
+  },
 ];
 
 let coursesElements = [];
 for (let i = 0; i < coursesElementsClass.length; i++) {
-   coursesElements.push(createElement('p', coursesElementsClass[i].tag,data.homeCourses[i].tag));
-   coursesElements.push(createElement('p', coursesElementsClass[i].title,data.homeCourses[i].title));
-   coursesElements.push(createElement('div', coursesElementsClass[i].durationMode,""));
+  coursesElements.push(
+    createElement("p", coursesElementsClass[i].tag, data.homeCourses[i].tag),
+  );
+  coursesElements.push(
+    createElement(
+      "p",
+      coursesElementsClass[i].title,
+      data.homeCourses[i].title,
+    ),
+  );
+  coursesElements.push(
+    createElement("div", coursesElementsClass[i].durationMode, ""),
+  );
 }
-
 
 let compteur = 0;
 for (let i = 0; i < coursesElements.length; i += 3) {
-    console.log(homeCourseSectionCourseClass[compteur]);
-    document.querySelector(`.${homeCourseSectionCourseClass[compteur]}`).appendChild(
-        coursesElements[i]
-    );
-    document.querySelector(`.${homeCourseSectionCourseClass[compteur]}`).appendChild(
-        coursesElements[i + 1]
-    );
-    document.querySelector(`.${homeCourseSectionCourseClass[compteur]}`).appendChild(
-        coursesElements[i + 2]
-    );
-    compteur += 1;
+  console.log(homeCourseSectionCourseClass[compteur]);
+  document
+    .querySelector(`.${homeCourseSectionCourseClass[compteur]}`)
+    .appendChild(coursesElements[i]);
+  document
+    .querySelector(`.${homeCourseSectionCourseClass[compteur]}`)
+    .appendChild(coursesElements[i + 1]);
+  document
+    .querySelector(`.${homeCourseSectionCourseClass[compteur]}`)
+    .appendChild(coursesElements[i + 2]);
+  compteur += 1;
 }
 
 for (let i = 0; i < 3; i++) {
-    
-    document.querySelector(`.${coursesElementsClass[i].durationMode}`).appendChild(
-        createElement('p','mode',data.homeCourses[i].mode)
-    )
-    document.querySelector(`.${coursesElementsClass[i].durationMode}`).appendChild(
-        createElement('p','duration',data.homeCourses[i].duration)
-    )
+  document
+    .querySelector(`.${coursesElementsClass[i].durationMode}`)
+    .appendChild(createElement("p", "mode", data.homeCourses[i].mode));
+  document
+    .querySelector(`.${coursesElementsClass[i].durationMode}`)
+    .appendChild(createElement("p", "duration", data.homeCourses[i].duration));
+}
+let experienceClassList = ["year", "role", "org", "desc"];
+let tempIter2 = 0;
+
+for (let index = 0; index < 5; index++) {
+  document
+    .querySelector(`.backgroundAndExperienceContent`)
+    .appendChild(
+      createElement(
+        "div",
+        `experiencBackground${index}`,
+        "",
+      ),
+    );
+
 }

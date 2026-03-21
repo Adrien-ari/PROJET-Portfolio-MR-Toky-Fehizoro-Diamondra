@@ -54,6 +54,58 @@ for (let index = 0; index < data.posts.length; index++) {
 }
 
 document
+  .querySelector(".blogPostsSection")
+  .appendChild(createElement("div", "buttonContainerBlogPosts", ""));
+let buttonValue = ["←prev", "next→"];
+
+for (let index = 0; index < buttonValue.length * 2; index++) {
+  if (index === 0) {
+    document
+      .querySelector(".buttonContainerBlogPosts")
+      .appendChild(
+        createElement("button", "prevButtonBlog", buttonValue[index]),
+      );
+  } else if (index === 3) {
+    document
+      .querySelector(".buttonContainerBlogPosts")
+      .appendChild(
+        createElement(
+          "button",
+          "nextButtonBlog",
+          buttonValue[buttonValue.length - 1],
+        ),
+      );
+  } else {
+    document
+      .querySelector(".buttonContainerBlogPosts")
+      .appendChild(createElement("button", "numberedButtonBlog", index));
+  }
+}
+
+let prevButtonBlog = document.querySelector('.prevButtonBlog');
+let nextButtonBlog = document.querySelector('.nextButtonBlog');
+prevButtonBlog.addEventListener('click',()=>{
+  for(let index = 0; index < data.posts.length - 5; index++) {
+      document.querySelector(`.postContentContainer${index}`).classList.remove('displayNothing');
+      document.querySelector(`.postContentContainer${index + 4}`)
+    .classList.add('displayNothing');
+    }
+  
+})
+
+nextButtonBlog.addEventListener('click',()=>{
+  for (let index = 0; index < data.posts.length - 5; index++) {
+    document.querySelector(`.postContentContainer${index}`)
+    .classList.add('displayNothing');
+  }
+  for (let index = 0; index < data.posts.length - 5; index++) {
+    document.querySelector(`.postContentContainer${index + 4}`)
+    .classList.remove('displayNothing');
+  }
+})
+
+/* manomboka eto ny aside */
+document
   .querySelector(".blogAdditifContent")
   .appendChild(createElement("div", "archiveContainerBlog", ""));
 
@@ -90,11 +142,30 @@ document
   );
 document
   .querySelector(".newsletter")
+  .appendChild(createElement("input", `newsletterIncitationInput`, ""));
+
+document
+  .querySelector(".blogAdditifContent")
+  .appendChild(createElement("div", "videoYoutubeContainer", ""));
+document
+  .querySelector(".videoYoutubeContainer")
   .appendChild(
-    createElement(
-      "input",
-      `newsletterIncitationInput`,
-      ""
-    )
+    createElement("p", "videoYoutubePresent", "latest video from the channel"),
   );
 
+for (let index = 0; index < data.youtubeVideos.length; index++) {
+  document
+    .querySelector(".videoYoutubeContainer")
+    .appendChild(createElement("div", `videoInstance${index}`, ""));
+  document
+    .querySelector(`.videoInstance${index}`)
+    .appendChild(createElement("video", `video${index}`, ""));
+  document.querySelector(`.video${index}`).src =
+    `https://www.youtube.com/${data.youtubeVideos[index].id}`;
+  document
+    .querySelector(`.videoInstance${index}`)
+    .appendChild(
+      createElement("p", `videoTitle${index}`, data.youtubeVideos[index].title),
+    );
+  document.querySelector(`.video${index}`).classList.add("commonClassVideo");
+}
