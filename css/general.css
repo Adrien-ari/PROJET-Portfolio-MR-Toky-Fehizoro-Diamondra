@@ -155,8 +155,9 @@ footer {
 
 .textIncitationFooter {
   color: var(--color-text-white);
-  font-size: var(--min-font-size);
+  font-size: 16px;
 }
+
 
 .buttonCTA {
   background-color: var(--color-red);
@@ -168,16 +169,27 @@ footer {
   transition: background-color 100ms ease-in-out;
 }
 
-.buttonCTA:hover {
+.buttonCTA:hover  {
   background-color: var(--color-bg-warm);
   color: var(--color-red);
 
+}
+.buttonCTA a {
+    color: inherit;
+    text-decoration: none;
 }
 
 .textIncitationFooter {
   width: 25%;
   text-align: center;
   color: var(--color-text-white);
+}
+hr{
+  background-color: var(--color-red);
+  width: 50px;
+  height: 5px;
+  border-radius: 10px;
+  border: none;
 }
 
 /* Respon by diams */
