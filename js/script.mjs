@@ -106,7 +106,7 @@ for (let i = 0; i < 3; i++) {
 let experienceClassList = ["year", "role", "org", "desc"];
 let tempIter2 = 0;
 
-for (let index = 0; index < 5; index++) {
+for (let index = 0; index < 4; index++) {
   document
     .querySelector(`.backgroundAndExperienceContent`)
     .appendChild(
@@ -116,5 +116,39 @@ for (let index = 0; index < 5; index++) {
         "",
       ),
     );
-
+  document
+    .querySelector(`.experiencBackground${index}`)
+    .appendChild(
+      createElement(
+        "p",
+        `year`,
+        data.experiences[index].year,
+      ),
+    );
+  document
+    .querySelector(`.experiencBackground${index}`)
+    .appendChild(
+      createElement(
+        "p",
+        `role`,
+        data.experiences[index].role,
+      ),
+    );
+  document
+    .querySelector(`.experiencBackground${index}`)
+    .appendChild(
+      createElement(
+        "p",
+        `org`,
+        data.experiences[index].org,
+      ),
+    );
+    document.querySelector(`.experiencBackground${index}`)
+    .appendChild(
+      createElement(
+        "p",
+        `desc`,
+        data.experiences[index].desc,
+      ),
+    );
 }
