@@ -5,16 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=*, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Courses | Toky</title>
     <link rel="stylesheet" href="../css/courses.css">
     <link rel="stylesheet" href="../css/general.css">
+    <link rel="shortcut icon" href="../images/logo_min.png" type="image/x-icon">
 </head>
 
 <body>
     <header>
-       <div class="brandName">
+        <div class="brandName">
             <img src="/images/logo.png" alt="">
         </div>
         <nav class="navigation">
@@ -52,12 +53,69 @@
         <section class="courseIntroduction">
             <p>learning</p>
             <h1>All <span>Courses</span></h1>
-            <p class="CoursesIntroductionparagraph">Online and offline courses across development, translation and research. Find the one that fits your level and goals.</p>
+            <p class="CoursesIntroductionparagraph">Online and offline courses across development, translation and
+                research. Find the one that fits your level and goals.</p>
         </section>
         <section class="filterCourses">
-            
+            <div class="languages">
+                <p class="languageLabel">
+                    LANGAGES
+                </p>
+                <div class="languagesInstancesContainer">
+                    <button class="flags"><img src="../images/pngtree-madagascar-flag-png-image_6460709.png"
+                            alt=""></button>
+                    <button class="flags"><img src="../images/png-french-flag-png-.png" alt=""></button>
+                    <button class="flags"><img src="../images/amercian-flag.png" alt=""></button>
+                </div>
+            </div>
+            <div class="techologiesTeached">
+                <p class="technologyLabel">
+                    TECHNOLOGIES
+                </p>
+                <select name="" id="">
+                    <option value="All technologies">All technologies</option>
+                    <option value="Javascript">Javascript</option>
+                    <option value="Java">Java</option>
+                    <option value="Python">Python</option>
+                    <option value="PHP">PHP</option>
+                </select>
+            </div>
+            <div class="coursesLevel">
+                <p class="levelLabel">
+                    LEVELS
+                </p>
+                <select name="" id="">
+                    <option value="All levels">All levels</option>
+                    <option value="beginner">beginner</option>
+                    <option value="intermediate">intermediate</option>
+                    <option value="advanced">advanced</option>
+                </select>
+            </div>
+            <div class="priceRange">
+                <div class="levelLabel">
+                    <p>PRICE RANGE</p>
+                    <p class="priceValue">
+                        <span>0</span>-
+                        <span>300000</span>Ar
+                    </p>
+                </div>
+                <div class="priceRangeSelects">
+                    <input type="range" name="" id="lowRange">
+                    <input type="range" name="" id="highRange">
+                </div>
+            </div>
+            <div class="searchKeyword">
+                <p class="searchLabel">SEARCH</p>
+                <input type="search" name="" id="" placeholder="search by keyword ...">
+            </div>
+            <button>CLEAR All</button>
+        </section>
+        <section class="CoursesContent">
+
         </section>
     </main>
+    <script type="module" src="../js/courses.mjs"></script>
+    <script type="module" src="../js/tokimahery.data.mjs"></script>
 </body>
 
 </html>
