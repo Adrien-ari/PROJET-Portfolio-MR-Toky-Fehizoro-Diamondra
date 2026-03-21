@@ -81,3 +81,42 @@
 .buttonCTA {
     border-radius: calc(var(--border-radius) * 2);
 }
+
+/* responsive by diams */
+@media (max-width: 767px) {
+
+  .researchPresentation {
+    height: auto;
+    padding: 5rem 1.5rem 2rem;
+    text-align: center;
+  }
+
+  .researchPresentation h2 {
+    font-size: 2rem;
+  }
+
+  .descriptionResearch {
+    width: 100%;
+  }
+
+  .academicPaper0,
+  .academicPaper1,
+  .academicPaper2 {
+    width: 100%;        
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .academicResearchSection {
+    padding-inline: 1rem;
+    width: 100%;
+  }
+
+  .tagsAndPublished0,
+  .tagsAndPublished1,
+  .tagsAndPublished2 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
