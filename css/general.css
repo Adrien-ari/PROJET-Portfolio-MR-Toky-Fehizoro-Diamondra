@@ -271,7 +271,7 @@ hr{
 }
 .mobile-menu a:last-child { 
   border-bottom: none; 
-  z-index: 999;
+  z-index: 99;
 }
 .mobile-menu a:hover { 
   background: rgba(255,255,255,0.1); padding-left: 1rem; 
@@ -282,7 +282,7 @@ hr{
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.4);
-  z-index: 999;
+  z-index: 98;
 }
 .overlay.visible { display: block; }
 /* Respon by diams */
@@ -310,5 +310,5 @@ hr{
 }
  .brandName  img{
   aspect-ratio: 1/0.25;
-  width: 30vw;
+  width: 20vw;
 }
