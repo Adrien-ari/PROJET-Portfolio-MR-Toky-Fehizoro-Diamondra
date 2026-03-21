@@ -4,13 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>testimonials | Toky</title>
     <link rel="stylesheet" href="../css/testimonials.css">
 </head>
 
 <body>
     <header>
-        <div class="brandName">
+       <div class="brandName">
+            <img src="/images/logo.png" alt="">
         </div>
         <nav class="navigation">
             <ul>
@@ -25,7 +29,23 @@
             <input type="search" class="search" placeholder="search anything...">
             <div class="panier"><i class="fa-solid fa-basket-shopping"></i></div>
         </div>
+
+        <button class="burger" id="burgerBtn" aria-label="Ouvrir le menu" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
     </header>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-inner">
+            <a href="/html/index.html">HOME</a>
+            <a href="/html/courses.html">BLOG</a>
+            <a href="courses.html">COURSES</a>
+            <a href="testimonials.html">TESTIMONIALS</a>
+            <a href="research.html">RESEARCH</a>
+        </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
     <main>
         <section class="testimonialsIntroductionSection">
             <p>Social Proof</p>
