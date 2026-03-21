@@ -179,3 +179,92 @@ footer {
   text-align: center;
   color: var(--color-text-white);
 }
+
+/* Respon by diams */
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+.burger:hover { background: rgba(255,255,255,0.12); }
+.burger .bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--color-text-white);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
+}
+.burger.open .bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.burger.open .bar:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.burger.open .bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.mobile-menu {
+  position: fixed;
+  top: 64px;
+  left: 0; right: 0;
+  background: var(--color-red-dark);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  z-index: 99;
+}
+.mobile-menu.open { max-height: 400px; }
+.mobile-menu-inner {
+  padding: 1rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.mobile-menu a {
+  color: var(--color-text-white);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.85rem 0.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  transition: background 0.3s ease, padding-left 0.3s ease;
+}
+.mobile-menu a:last-child { border-bottom: none; }
+.mobile-menu a:hover { background: rgba(255,255,255,0.1); padding-left: 1rem; }
+
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 98;
+}
+.overlay.visible { display: block; }
+
+@media (max-width: 767px) {
+  .navigation        { display: none; }
+  .search_and_panier { display: none; }
+  .burger            { display: flex; }
+
+  /* footer */
+  footer {
+    height: auto;
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
+
+  .textIncitationFooter {
+    width: 100%;
+  }
+
+  .incitationQuestionFooter {
+    font-size: 1.3rem;
+  }
+}
