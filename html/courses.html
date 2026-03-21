@@ -14,7 +14,8 @@
 
 <body>
     <header>
-        <div class="brandName">
+       <div class="brandName">
+            <img src="/images/logo.png" alt="">
         </div>
         <nav class="navigation">
             <ul>
@@ -29,8 +30,34 @@
             <input type="search" class="search" placeholder="search anything...">
             <div class="panier"><i class="fa-solid fa-basket-shopping"></i></div>
         </div>
+
+        <button class="burger" id="burgerBtn" aria-label="Ouvrir le menu" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
     </header>
-    <main></main>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-inner">
+            <a href="/html/index.html">HOME</a>
+            <a href="/html/courses.html">BLOG</a>
+            <a href="courses.html">COURSES</a>
+            <a href="testimonials.html">TESTIMONIALS</a>
+            <a href="research.html">RESEARCH</a>
+        </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <main>
+        <section class="courseIntroduction">
+            <p>learning</p>
+            <h1>All <span>Courses</span></h1>
+            <p class="CoursesIntroductionparagraph">Online and offline courses across development, translation and research. Find the one that fits your level and goals.</p>
+        </section>
+        <section class="filterCourses">
+            
+        </section>
+    </main>
 </body>
 
 </html>
