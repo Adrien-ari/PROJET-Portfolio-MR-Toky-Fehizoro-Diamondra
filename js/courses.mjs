@@ -100,6 +100,7 @@ frsFlag.addEventListener('click', () => {
   })
 });
 
+<<<<<<< HEAD
 amrFlag.addEventListener('click', () => {
   let courseInstanceList = document.querySelectorAll('.commonClassCInstance');
   courseInstanceList.forEach(element => {
@@ -110,3 +111,25 @@ amrFlag.addEventListener('click', () => {
 })
 
 
+=======
+// ajout par diams : relegler ce filtre de cours là
+const lowRange  = document.getElementById('lowRange');
+const highRange = document.getElementById('highRange');
+const rangeSelected = document.getElementById('rangeSelected');
+const rangeDisplay  = document.getElementById('rangeDisplay');
+const MAX = 300000;
+
+function updateRange() {
+  let lo = +lowRange.value;
+  let hi = +highRange.value;
+  if (lo > hi) { lowRange.value = hi; lo = hi; }
+  if (hi < lo) { highRange.value = lo; hi = lo; }
+  rangeSelected.style.left  = (lo / MAX * 100) + '%';
+  rangeSelected.style.right = ((MAX - hi) / MAX * 100) + '%';
+  rangeDisplay.textContent  = `${lo.toLocaleString('fr-MG')} Ar – ${hi.toLocaleString('fr-MG')} Ar`;
+}
+
+lowRange.addEventListener('input', updateRange);
+highRange.addEventListener('input', updateRange);
+updateRange();
+>>>>>>> 45a2c10469a1088b6876850ec1c47a59ba68c48e
