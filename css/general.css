@@ -48,6 +48,10 @@ html {
   scroll-behavior: smooth;
 }
 
+/* =============================================
+   HEADER
+   ============================================= */
+
 header {
   background-color: var(--color-red-dark);
   display: flex;
@@ -56,14 +60,13 @@ header {
   position: absolute;
   width: 100%;
   padding: calc(var(--padding) / 2);
+  z-index: 100;
 }
 
-.brandName  img{
+.brandName img {
   aspect-ratio: 1/0.25;
   width: 8vw;
-
 }
-
 
 .navigation ul {
   list-style: none;
@@ -90,7 +93,7 @@ header {
   content: '';
   width: 100%;
   display: block;
-  border-radius: var(--border-readius);
+  border-radius: var(--border-radius);
   height: 2px;
   background-color: var(--color-bg-white);
   border: none;
@@ -109,7 +112,6 @@ header {
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
-
 }
 
 .search {
@@ -120,7 +122,6 @@ header {
   border-radius: var(--border-radius);
   border: none;
   color: var(--color-text-white);
-
 }
 
 .search:focus {
@@ -136,28 +137,33 @@ input[type="search"]::placeholder {
   font-size: 1.5rem;
 }
 
+/* =============================================
+   FOOTER
+   ============================================= */
+
 footer {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 2rem;
-  padding: 2rem;
-  height: 30vh;
+  padding: 3rem 2rem;
+  height: auto;        /* ← corrigé : était 30vh (forçait une hauteur fixe) */
   background-color: var(--color-red);
 }
 
 .incitationQuestionFooter {
   font-family: var(--font-family-title);
   color: var(--color-text-white);
-  font-size: calc(var(--min-font-size) *2);
+  font-size: calc(var(--min-font-size) * 2);
 }
 
 .textIncitationFooter {
+  width: 25%;
+  text-align: center;
   color: var(--color-text-white);
   font-size: 16px;
 }
-
 
 .buttonCTA {
   background-color: var(--color-red);
@@ -167,44 +173,45 @@ footer {
   border-radius: calc(var(--border-radius) * 2);
   border: 2px solid var(--color-border-light);
   transition: background-color 100ms ease-in-out;
+  cursor: pointer;
 }
 
-.buttonCTA:hover  {
+.buttonCTA:hover {
   background-color: var(--color-bg-warm);
   color: var(--color-red);
-
 }
+
 .buttonCTA a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
-.textIncitationFooter {
-  width: 25%;
-  text-align: center;
-  color: var(--color-text-white);
+/* =============================================
+   COMPOSANTS COMMUNS
+   ============================================= */
+
+.titlePart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-family: var(--font-family-title);
+  flex-direction: row;
+  margin-block: 1rem;
 }
-.titlePart{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    font-family: var(--font-family-title);
-    flex-direction: row;
-    margin-block: 1rem;
+
+.titlePart p {
+  text-transform: uppercase;
+  color: var(--color-text-muted);
 }
-.titlePart  p{
-    text-transform: uppercase;
-    color: var(--color-text-muted);
-}
-hr{
+
+hr {
   background-color: var(--color-red);
   width: 50px;
   height: 3px;
   border-radius: 10px;
   border: none;
 }
-
 
 .burger {
   display: none;
@@ -220,9 +227,11 @@ hr{
   border-radius: 6px;
   transition: background 0.3s ease;
 }
+
 .burger:hover {
-   background: rgba(255,255,255,0.12);
+  background: rgba(255, 255, 255, 0.12);
 }
+
 .burger .bar {
   display: block;
   width: 22px;
@@ -232,32 +241,42 @@ hr{
   transition: transform 0.3s ease, opacity 0.3s ease;
   transform-origin: center;
 }
-.burger.open .bar:nth-child(1) { 
-  transform: translateY(7px) rotate(45deg); 
+
+.burger.open .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
 }
-.burger.open .bar:nth-child(2) { 
-  opacity: 0; transform: scaleX(0);
- }
-.burger.open .bar:nth-child(3) { 
-  transform: translateY(-7px) rotate(-45deg); 
+
+.burger.open .bar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.burger.open .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 .mobile-menu {
   position: fixed;
   top: 64px;
-  left: 0; right: 0;
+  left: 0;
+  right: 0;
   background: var(--color-red-dark);
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s ease;
   z-index: 99;
 }
-.mobile-menu.open { max-height: 400px; }
+
+.mobile-menu.open {
+  max-height: 400px;
+}
+
 .mobile-menu-inner {
   padding: 1rem 1.5rem 1.5rem;
   display: flex;
   flex-direction: column;
 }
+
 .mobile-menu a {
   color: var(--color-text-white);
   text-decoration: none;
@@ -266,36 +285,55 @@ hr{
   letter-spacing: 0.1em;
   text-transform: uppercase;
   padding: 0.85rem 0.5rem;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   transition: background 0.3s ease, padding-left 0.3s ease;
 }
-.mobile-menu a:last-child { 
-  border-bottom: none; 
-  z-index: 99;
+
+.mobile-menu a:last-child {
+  border-bottom: none;
 }
-.mobile-menu a:hover { 
-  background: rgba(255,255,255,0.1); padding-left: 1rem; 
+
+.mobile-menu a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  padding-left: 1rem;
 }
 
 .overlay {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
   z-index: 98;
 }
-.overlay.visible { display: block; }
-/* Respon by diams */
+
+.overlay.visible {
+  display: block;
+}
+
+/* =============================================
+   RESPONSIVE — TABLETTE (max 1024px)
+   ============================================= */
+
+@media (max-width: 1024px) {
+  .brandName img {
+    width: 14vw;
+  }
+}
+
+/* =============================================
+   RESPONSIVE — MOBILE (max 767px)
+   ============================================= */
+
 @media (max-width: 767px) {
   .navigation        { display: none; }
   .search_and_panier { display: none; }
   .burger            { display: flex; }
 
- 
-
+  .brandName img {
+    width: 28vw;
+  }
 
   footer {
-    height: auto;
     padding: 2rem 1.5rem;
     text-align: center;
   }
@@ -307,8 +345,4 @@ hr{
   .incitationQuestionFooter {
     font-size: 1.3rem;
   }
-}
- .brandName  img{
-  aspect-ratio: 1/0.25;
-  width: 20vw;
 }

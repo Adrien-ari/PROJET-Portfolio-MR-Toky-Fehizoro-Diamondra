@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,8 +9,8 @@
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Courses | Toky</title>
-    <link rel="stylesheet" href="../css/courses.css">
-    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/course.css">
+    <link rel="stylesheet" href="../css/general2.css">
     <link rel="shortcut icon" href="../images/logo_min.png" type="image/x-icon">
 </head>
 
@@ -51,8 +52,12 @@
 
     <main>
         <section class="courseIntroduction">
-            <p>learning</p>
-            <h1>All <span>Courses</span></h1>
+            <div class="titlePart">
+                 <hr>
+                <p> learning </p>
+                  <hr>
+            </div>
+            <h2><em><span>Research</span> papers</em></h2>
             <p class="CoursesIntroductionparagraph">Online and offline courses across development, translation and
                 research. Find the one that fits your level and goals.</p>
         </section>
@@ -72,7 +77,7 @@
                 <p class="technologyLabel">
                     TECHNOLOGIES
                 </p>
-                <select name="" id="">
+                <select name="" id="technologiesSelect">
                     <option value="All technologies">All technologies</option>
                     <option value="Javascript">Javascript</option>
                     <option value="Java">Java</option>
@@ -84,7 +89,7 @@
                 <p class="levelLabel">
                     LEVELS
                 </p>
-                <select name="" id="">
+                <select name="" id="levelsSelect">
                     <option value="All levels">All levels</option>
                     <option value="beginner">beginner</option>
                     <option value="intermediate">intermediate</option>
@@ -92,23 +97,25 @@
                 </select>
             </div>
             <div class="priceRange">
-                <div class="levelLabel">
+                <div class="rangeLabelRow">
                     <p>PRICE RANGE</p>
-                    <p class="priceValue">
-                        <span>0</span>-
-                        <span>300000</span>Ar
-                    </p>
+                    <span id="rangeDisplay">0 Ar – 300 000 Ar</span>
                 </div>
-                <div class="priceRangeSelects">
-                    <input type="range" name="" id="lowRange">
-                    <input type="range" name="" id="highRange">
+                <div class="sliderTrack">
+                    <div class="rangeSelected" id="rangeSelected"></div>
+                    <div class="ranges">
+                        <input type="range" id="lowRange"  min="0" max="300000" step="1000" value="0">
+                        <input type="range" id="highRange" min="0" max="300000" step="1000" value="300000">
+                    </div>
                 </div>
+                
+                </div> 
+                <div class="searchKeyword">
+                    <p class="searchLabel">SEARCH</p>
+                    <input type="search" name="" id="" placeholder="search by keyword ...">
+                </div>
+                <button class="clear">CLEAR All</button>
             </div>
-            <div class="searchKeyword">
-                <p class="searchLabel">SEARCH</p>
-                <input type="search" name="" id="" placeholder="search by keyword ...">
-            </div>
-            <button>CLEAR All</button>
         </section>
         <section class="CoursesContent">
 
