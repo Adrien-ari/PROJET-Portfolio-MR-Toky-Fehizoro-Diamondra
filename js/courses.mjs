@@ -5,7 +5,7 @@ let CoursesContent = document.querySelector(".CoursesContent");
 for (let index = 0; index < data.courses.length; index++) {
   let courseInstance = createElement("div", `courseInstance${index}`, "");
   let tagsContainer = createElement("div", "tagsContainer", "");
-  let level = createElement("p", `level`,data.courses[index].level);
+  let level = createElement("p", `level`, data.courses[index].level);
   let AboutCourse = createElement("div", `aboutCourse`, "");
   let courseTitle = createElement(
     "p",
@@ -48,50 +48,65 @@ for (let index = 0; index < data.courses.length; index++) {
   );
   courseInstance.append(tagsContainer, level, AboutCourse);
   CoursesContent.appendChild(courseInstance);
-  courseInstance.classList.add('commonClassCInstance');
+  courseInstance.classList.add("commonClassCInstance");
   courseInstance.style.backgroundImage = `url(${data.courses[index].thumbnail})`;
-  if (level.textContent ==='advanced') {
-    level.classList.add('levelRed');
-  }else if (level.textContent ==='beginner') {
-    level.classList.add('levelGreen');
-  }else{
-    level.classList.add('levelGreen');
+  if (level.textContent === "advanced") {
+    level.classList.add("levelRed");
+  } else if (level.textContent === "beginner") {
+    level.classList.add("levelGreen");
+  } else {
+    level.classList.add("levelYellow");
   }
+  courseTitle.classList.add("commonTitleStyle");
 }
-
 
 /*
 Add to cart 
 
 */
 
-let addCardButtons = document.querySelectorAll('.addCart');
+let addCardButtons = document.querySelectorAll(".addCart");
 
-addCardButtons.forEach((element,index) => {
-  element.addEventListener('click',() => {
-    
+addCardButtons.forEach((element, index) => {
+  element.addEventListener("click", () => {
     if (localStorage.contains(data.courses[index].title)) {
-      alert('already here');
-    }else{
-      localStorage.setItem(data.courses[index].title, data.courses[index].price);
+      alert("already here");
+    } else {
+      localStorage.setItem(
+        data.courses[index].title,
+        data.courses[index].price,
+      );
     }
-    
   });
 });
+let mdFlag = document.querySelector(".mdFlag");
+let frsFlag = document.querySelector('.frsFlag');
+let amrFlag = document.querySelector('.amrFlag');
+mdFlag.addEventListener('click', () => {
+  let courseInstanceList = document.querySelectorAll('.commonClassCInstance');
+  courseInstanceList.forEach(element => {
+    if (element.firstChild.firstChild.textContent !== 'mg') {
+      element.classList.toggle('cardFiltered');
+    }
+  })
+});
 
-document.querySelector('.mdFlag').addEventListener('click',()=>{
-  let language = document.querySelectorAll('.languageTag');
-  language.forEach((element,index)=>{
-    if (element.textContent !== 'mg') {
-      document.querySelector(`.courseInstance${index}`).style.display = 'none';
+frsFlag.addEventListener('click', () => {
+  let courseInstanceList = document.querySelectorAll('.commonClassCInstance');
+  courseInstanceList.forEach(element => {
+    if (element.firstChild.firstChild.textContent !== 'fr') {
+      element.classList.toggle('cardFiltered');
     }
   })
 });
-document.querySelector('.frsFlag').addEventListener('click',()=>{
-  let language = document.querySelectorAll('.languageTag');
-  language.forEach((element,index)=>{
-    if (element.textContent !== 'fr') {
-      document.querySelector(`.courseInstance${index}`).classList.toggle('displayCart');
+
+amrFlag.addEventListener('click', () => {
+  let courseInstanceList = document.querySelectorAll('.commonClassCInstance');
+  courseInstanceList.forEach(element => {
+    if (element.firstChild.firstChild.textContent !== 'en') {
+      element.classList.toggle('cardFiltered');
     }
   })
-});
+})
+
+
