@@ -314,7 +314,6 @@
     color: var(--color-red);
 }
 
-/* Responsive by diams */
 @media (max-width: 767px) {
 
   .testimonialsIntroductionSection {

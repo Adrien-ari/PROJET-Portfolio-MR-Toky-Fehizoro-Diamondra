@@ -60,11 +60,6 @@ for (let index = 0; index < data.courses.length; index++) {
 }
 
 
-/*
-Add to cart 
-
-*/
-
 let addCardButtons = document.querySelectorAll('.addCart');
 
 addCardButtons.forEach((element,index) => {

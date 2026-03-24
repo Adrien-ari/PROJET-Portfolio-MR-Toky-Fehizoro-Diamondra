@@ -104,7 +104,6 @@ nextButtonBlog.addEventListener('click',()=>{
   }
 })
 
-/* manomboka eto ny aside */
 document
   .querySelector(".blogAdditifContent")
   .appendChild(createElement("div", "archiveContainerBlog", ""));
