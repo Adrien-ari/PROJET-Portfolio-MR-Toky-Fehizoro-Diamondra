@@ -17,6 +17,8 @@
     display: flex;
     align-items: center;
     gap: 2rem;
+    padding-block: 1rem;
+    margin-block: 2rem;
 }
 
 .blogPostsSection {
@@ -98,18 +100,34 @@
     display: flex;
     gap: 1rem;
 }
-
+.archiveContainerBlog,
+.newsletter,
+.videoYoutubeContainer{
+    border-radius: 10px;
+    background-color: var(--color-bg-warm);
+}
+.newsletter,
+.videoYoutubeContainer{
+    padding: 1rem;
+    color: var(--color-text-light);
+}
+.videoInstance0{
+    width: 100%;
+}
 .blogAdditifContent {
     display: flex;
     gap: 2rem;
     flex-direction: column;
-    width: 20%;
+    width: 40%;
     border-radius: var(--border-radius);
-    border: 2px solid rebeccapurple;
 }
-
+.blogAdditifContent{
+   margin-bottom: 70rem;
+}
 .commonClassVideo {
     background-color: var(--color-red);
+    margin-block: 1.5rem;
+    border-radius: 10px;
     width: 90%;
     aspect-ratio: 3/2;
 }
@@ -117,7 +135,48 @@
 .displayNothing {
     display: none;
 }
+.archiveElement0,
+.archiveElement1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+.newsletterIncitationInput{
+    margin-block: 2rem;
+    padding: 5px;
+    border-radius: 5px;
+}
+.postContentContainer0 ,
+.postContentContainer1,
+.postContentContainer2,
+.postContentContainer3,
+.postContentContainer4,
+.postContentContainer5,
+.postContentContainer6,
+.postContentContainer7{
+    box-shadow: 1ox 1px 1px grey;
+    border: 2px solid var(--color-bg-warm);
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start
+    
+}
 
+ .blogPostTitle0,
+ .blogPostTitle1,
+ .blogPostTitle2,
+ .blogPostTitle3,
+ .blogPostTitle4,
+ .blogPostTitle5,
+ .blogPostTitle6,
+ .blogPostTitle7{
+    color: var(--color-red);
+    font-weight: bolder;
+    font-size: 20px;
+ }
 /* Ajout de page par diamondra */
 @media (max-width: 767px) {
 

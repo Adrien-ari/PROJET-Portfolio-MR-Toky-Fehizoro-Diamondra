@@ -27,7 +27,7 @@
 .testimonialsIntroductionSection .testimonialsIntroduction {
     width: 30%;
     text-align: center;
-    font-size: var(--min-font-size);
+    font-size: 16px;
     color: var(--color-text-muted);
 }
 .block{
@@ -48,8 +48,8 @@
 }
 .testimonialsIntroduction,
 .textIncitationFooter{
-    font-size: 50px;
-    color: blue;
+    font-size: 16px;
+    color:var(--color-text-white);
 }
 .testimonialsStudentsSection {
     display: grid;
@@ -87,6 +87,7 @@
 .testimonialsStudentsProfile3,
 .testimonialsStudentsProfile4 {
     display: flex;
+    font-weight: bold;
     padding: calc(var(--padding) / 2);
     align-items: center;
     justify-content: space-between;
@@ -112,6 +113,45 @@
 .testimonialsDescriptions {
     color: var(--color-text-light);
     font-size: calc(var(--min-font-size) + 0.1rem);
+}
+.rating,
+.clientRating0 ,
+.clientRating1 ,
+.clientRating2 ,
+.clientRating3 ,
+.clientRating4 {
+    color: var(--color-red);
+}
+
+.testimonialsClients1 :first-child,
+.testimonialsClients0 :first-child,
+.testimonialsClients2 :first-child,
+.testimonialsClients3 :first-child,
+.testimonialsClients4 :first-child{
+    color: var(--color-red)
+}
+
+.clientRating0 ,
+.clientRating1 ,
+.clientRating2 ,
+.clientRating3 ,
+.clientRating4 {
+    color: var(--color-text-light);
+}
+.author0,
+.author1,
+.author3,
+.author2,
+.author4{
+    font-weight: bold;
+}
+.authorAndRole0 :last-child,
+.authorAndRole1 :last-child,
+.authorAndRole2 :last-child,
+.authorAndRole3 :last-child,
+.authorAndRole4 :last-child{
+    text-transform: uppercase;
+    color: var(--color-text-light);
 }
 
  .testimonialsCollaboratorsSection {
@@ -146,7 +186,34 @@
     align-items: center;
     gap: 10%;
     flex-direction: column;
-    padding: var(--padding);
+    padding: calc(var(--padding)*2);
+}
+.testimonialsCollaborators1 p,
+.testimonialsCollaborators2 p,
+.testimonialsCollaborators3 p,
+.testimonialsCollaborators0 p,
+.testimonialsCollaborators4 p{
+   font-style: italic;
+   color: black;
+   
+}
+.author6,
+.author7,
+.author8,
+.author9,
+.author5,
+.author6{
+    font-weight: bold;
+    font-style: normal;
+}
+.role6,
+.role7,
+.role8,
+.role9,
+.role4,
+.role5{
+    text-transform: uppercase;
+    color: var(--color-text-light);
 }
 
 .testimonialsCollaboratorsProfile0,
@@ -188,7 +255,7 @@
 .testimonialsClients2:hover,
 .testimonialsClients3:hover,
 .testimonialsClients4:hover {
-    box-shadow: 0px 0px 30px var(--color-text-muted);
+    box-shadow: 0px 0px 1px var(--color-text-muted);
 }
 .clientProfile0,
 .clientProfile1,
