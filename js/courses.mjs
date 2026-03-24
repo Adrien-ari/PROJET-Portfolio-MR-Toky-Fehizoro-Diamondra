@@ -77,7 +77,23 @@ addCardButtons.forEach((element,index) => {
     }
   });
 });
+  let mdFlag = document.querySelector('.mdFlag');
+  let frsFlag = document.querySelector('.frsFlag');
+  let amrFlag = document.querySelector('.amrFlag');
 
+
+mdFlag.addEventListener("click", () => {
+  let courseInstanceList = document.querySelectorAll(".commonClassCInstance");
+  courseInstanceList.forEach((element) => {
+    element.classList.remove("cardFiltered");
+  });
+
+  courseInstanceList.forEach((element) => {
+    if (element.firstChild.firstChild.textContent !== "mg") {
+      element.classList.toggle("cardFiltered");
+    }
+  });
+});
 frsFlag.addEventListener("click", () => {
   let courseInstanceList = document.querySelectorAll(".commonClassCInstance");
   courseInstanceList.forEach((element) => {
@@ -248,9 +264,6 @@ document.querySelector(".confirmOrderButton").addEventListener("click", () => {
         "textConfirmation",
         "We'll be in touch shortly with all the details. welcome abroad",
       ),
-      setTimeout(() => {
-        document.querySelector('.confirmationMessage').style.display = 'none';
-      },10000)
     );
 
 });
