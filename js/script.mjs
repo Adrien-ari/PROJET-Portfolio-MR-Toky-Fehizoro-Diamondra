@@ -152,3 +152,7 @@ for (let index = 0; index < 4; index++) {
       ),
     );
 }
+let panier = document.querySelector(".fa-solid");
+panier.addEventListener("click", () => {
+  document.querySelector(".cart").classList.toggle("cardFiltered");
+});

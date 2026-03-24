@@ -133,3 +133,8 @@ for (let i = 0; i < 5; i++) {
     );
 
 }
+
+let panier = document.querySelector(".fa-solid");
+panier.addEventListener("click", () => {
+  document.querySelector(".cart").classList.toggle("cardFiltered");
+});

@@ -46,3 +46,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 1000);
     });
 });
+
+let panier = document.querySelector(".fa-solid");
+panier.addEventListener("click", () => {
+  document.querySelector(".cart").classList.toggle("cardFiltered");
+});

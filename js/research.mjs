@@ -90,3 +90,8 @@ for (let index = 0; index < data.papers.length; index++) {
     .querySelector(`.researchPDF${index}`)
     .setAttribute("href", data.papers[index].pdfUrl);
 }
+
+let panier = document.querySelector(".fa-solid");
+panier.addEventListener("click", () => {
+  document.querySelector(".cart").classList.toggle("cardFiltered");
+});

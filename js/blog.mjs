@@ -168,3 +168,8 @@ for (let index = 0; index < data.youtubeVideos.length; index++) {
     );
   document.querySelector(`.video${index}`).classList.add("commonClassVideo");
 }
+
+let panier = document.querySelector(".fa-solid");
+panier.addEventListener("click", () => {
+  document.querySelector(".cart").classList.toggle("cardFiltered");
+});
