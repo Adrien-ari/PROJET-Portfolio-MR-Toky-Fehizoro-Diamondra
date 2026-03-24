@@ -180,7 +180,7 @@ export const data = {
     {
       id: 1,
       role: "student",
-      rating: 5,
+      rating: "★★★★★",
       description:
         "A precious aid, a light shining upon every step of my journey",
       author: "Soa Mariaka, Promotion Mpamakilay, HEI (2021-2024)",
@@ -189,7 +189,7 @@ export const data = {
     {
       id: 2,
       role: "student",
-      rating: 5,
+      rating: "★★★★★",
       description:
         "An inspiring mentor who transforms complex concepts into clear and structured knowledge. The discipline and rigor I learned here shaped the way I approach every technical challenge today.",
       author: "Faniry Keziah, Promotion Mpamakilay, HEI (2022-2025)",
@@ -198,7 +198,7 @@ export const data = {
     {
       id: 3,
       role: "student",
-      rating: 5,
+      rating: "★★★★★",
       description:
         "More than courses, it was a mindset shift. Learning how to think structurally about databases and algorithms changed my confidence as a developer.",
       author: "Ando Ramanantsoa, Promotion Avotra, HEI (2021-2024)",
@@ -207,7 +207,7 @@ export const data = {
     {
       id: 4,
       role: "student",
-      rating: 4,
+      rating: "★★★★★",
       description:
         "The emphasis on fundamentals — Git, SQL, system design — prepared me for real-world projects. Every assignment felt practical and meaningful.",
       author: "Dinasoa Ratsimba, Promotion Avotra, HEI (2022-2025)",
@@ -216,7 +216,7 @@ export const data = {
     {
       id: 5,
       role: "student",
-      rating: 5,
+      rating: "★★★★★",
       description:
         "Demanding but fair. The standards were high, yet the support was constant. I learned discipline, autonomy, and how to truly understand what I build.",
       author: "Judicael Randrianjato, Promotion Mpamakilay, HEI (2021-2024)",
@@ -225,7 +225,7 @@ export const data = {
     {
       id: 6,
       role: "collaborator",
-      rating: 5,
+      rating: "★★★★★",
       description:
         'From algorithm storytelling to backend architecture, every lesson connected theory with practice. It pushed me to go beyond just "making it work."',
       author: "Mayah Andriatsitohaina, Promotion Avotra, HEI (2023-2026)",
@@ -234,7 +234,7 @@ export const data = {
     {
       id: 7,
       role: "collaborator",
-      rating: 4,
+      rating: "★★★★★",
       description:
         "The way operating systems and databases were taught made abstract concepts concrete. I now approach technical problems with clarity and structure.",
       author: "Axel, Promotion Mpamakilay, HEI (2022-2025)",
@@ -243,7 +243,7 @@ export const data = {
     {
       id: 8,
       role: "collaborator",
-      rating: 5,
+      rating: "★★★★★",
       description:
         "Beyond coding, I gained professional communication skills and technical English confidence. That made a real difference during internships.",
       author: "Tolojanahary Randrambelo, Promotion Avotra, HEI (2023-2026)",
@@ -252,7 +252,7 @@ export const data = {
     {
       id: 9,
       role: "collaborator",
-      rating: 5,
+      rating: "★★★★★",
       description:
         "The rigor in project reviews and exam preparation pushed me to exceed my limits. It was challenging, but it prepared me for industry expectations.",
       author: "Fiantso Harena, Promotion Mpamakilay, HEI (2021-2024)",
@@ -261,7 +261,7 @@ export const data = {
     {
       id: 10,
       role: "collaborator",
-      rating: 4,
+      rating: "★★★★★",
       description:
         "A rare combination of technical depth and pedagogical clarity. Working alongside Tokimahery elevated the quality of everything we built together.",
       author: "Ravo Rakotondrabe",
@@ -270,7 +270,7 @@ export const data = {
     {
       id: 11,
       role: "customer",
-      rating: 5,
+      rating: "★★★★★",
       description:
         "The translation work delivered was precise, fast, and culturally nuanced. Exactly what our project needed.",
       author: "Hery Andriantsoa",
@@ -279,7 +279,7 @@ export const data = {
     {
       id: 12,
       role: "customer",
-      rating: 5,
+      rating: "★★★★★",
       description:
         "We hired Tokimahery to consult on our backend architecture. The recommendations were pragmatic and immediately actionable.",
       author: "Lalaina Rasolofo",
@@ -288,7 +288,7 @@ export const data = {
     {
       id: 13,
       role: "customer",
-      rating: 4,
+      rating: "★★★★★",
       description:
         "Professional, responsive, and thorough. The deliverables exceeded our expectations in both quality and timeliness.",
       author: "Miora Randriamihaja",
@@ -297,7 +297,7 @@ export const data = {
     {
       id: 14,
       role: "customer",
-      rating: 5,
+      rating: "★★★★★",
       description:
         "Tokimahery helped us untangle a legacy codebase that had been holding us back for years. Clear roadmap, clean execution.",
       author: "Njaka Rakotomalala",
@@ -306,7 +306,7 @@ export const data = {
     {
       id: 15,
       role: "customer",
-      rating: 5,
+      rating: "★★★★★",
       description:
         "From scoping to delivery, the whole process was smooth and transparent. I would not hesitate to work together again.",
       author: "Sitraka Andriamanantena",

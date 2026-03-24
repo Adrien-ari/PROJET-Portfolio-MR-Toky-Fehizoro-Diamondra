@@ -57,23 +57,23 @@ for (let index = 0; index < data.courses.length; index++) {
   } else {
     level.classList.add("levelYellow");
   }
-  courseTitle.classList.add("commonTitleStyle");
 }
 
-let mdFlag = document.querySelector(".mdFlag");
-let frsFlag = document.querySelector(".frsFlag");
-let amrFlag = document.querySelector(".amrFlag");
 
-mdFlag.addEventListener("click", () => {
-  let courseInstanceList = document.querySelectorAll(".commonClassCInstance");
+/*
+Add to cart 
 
-  courseInstanceList.forEach((element) => {
-    element.classList.remove("cardFiltered");
-  });
+*/
 
-  courseInstanceList.forEach((element) => {
-    if (element.firstChild.firstChild.textContent !== "mg") {
-      element.classList.toggle("cardFiltered");
+let addCardButtons = document.querySelectorAll('.addCart');
+
+addCardButtons.forEach((element,index) => {
+  element.addEventListener('click',() => {
+    
+    if (localStorage.contains(data.courses[index].title)) {
+      alert('already here');
+    }else{
+      localStorage.setItem(data.courses[index].title, data.courses[index].price);
     }
   });
 });
