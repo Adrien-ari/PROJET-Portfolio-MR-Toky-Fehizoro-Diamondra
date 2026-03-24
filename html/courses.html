@@ -1,15 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=*, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Courses | Toky</title>
-    <link rel="stylesheet" href="../css/course.css">
+    <link rel="stylesheet" href="../css/courses.css">
     <link rel="stylesheet" href="../css/general2.css">
     <link rel="shortcut icon" href="../images/logo_min.png" type="image/x-icon">
 </head>
@@ -38,6 +37,17 @@
             <span class="bar"></span>
             <span class="bar"></span>
         </button>
+        <div class="cart cardFiltered">
+            <div class="cartHeader"><p>Your cart</p><div>x</div></div>
+            <div class="commandContainer"></div>
+            <div class="confirmOrder">
+                <div class="sumOrder">
+                    <p>total</p>
+                    <p></p>
+                </div>
+                <button class="confirmOrderButton">CONFIRM ORDER</button>
+            </div>
+        </div>
     </header>
     <div class="mobile-menu" id="mobileMenu">
         <div class="mobile-menu-inner">
@@ -57,7 +67,7 @@
                 <p> learning </p>
                   <hr>
             </div>
-            <h2><em><span>Research</span> papers</em></h2>
+            <h2><span>All </span>courses</h2>
             <p class="CoursesIntroductionparagraph">Online and offline courses across development, translation and
                 research. Find the one that fits your level and goals.</p>
         </section>
@@ -78,11 +88,11 @@
                     TECHNOLOGIES
                 </p>
                 <select name="" id="technologiesSelect">
-                    <option value="All technologies">All technologies</option>
-                    <option value="Javascript">Javascript</option>
-                    <option value="Java">Java</option>
-                    <option value="Python">Python</option>
-                    <option value="PHP">PHP</option>
+                    <option value="All technologies" class="optionTechnologie">All technologies</option>
+                    <option value="Javascript" class="optionTechnologie">Javascript</option>
+                    <option value="Java" class="optionTechnologie">Java</option>
+                    <option value="Python" class="optionTechnologie">Python</option>
+                    <option value="PHP" class="optionTechnologie">PHP</option>
                 </select>
             </div>
             <div class="coursesLevel">
@@ -104,8 +114,8 @@
                 <div class="sliderTrack">
                     <div class="rangeSelected" id="rangeSelected"></div>
                     <div class="ranges">
-                        <input type="range" id="lowRange"  min="0" max="300000" step="1000" value="0">
-                        <input type="range" id="highRange" min="0" max="300000" step="1000" value="300000">
+                        <input type="range" id="lowRange"  min="0" max="300000" step="1" value="0">
+                        <input type="range" id="highRange" min="0" max="300000" step="1" value="300000">
                     </div>
                 </div>
                 

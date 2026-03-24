@@ -72,7 +72,7 @@ export const data = {
       price: 120000,
       level: "beginner",
       language: "en",
-      technologies: ["javascript"],
+      technologies: ["Javascript"],
     },
     {
       id: 2,
@@ -84,7 +84,7 @@ export const data = {
       price: 220000,
       level: "beginner",
       language: "en",
-      technologies: ["java"],
+      technologies: ["Java"],
     },
     {
       id: 3,
@@ -96,7 +96,7 @@ export const data = {
       price: 180000,
       level: "beginner",
       language: "fr",
-      technologies: ["sql"],
+      technologies: ["Sql"],
     },
     {
       id: 4,
@@ -156,7 +156,7 @@ export const data = {
       price: 150000,
       level: "intermediate",
       language: "en",
-      technologies: ["javascript"],
+      technologies: ["Javascript"],
     },
     {
       id: 9,
@@ -168,7 +168,7 @@ export const data = {
       price: 250000,
       level: "advanced",
       language: "fr",
-      technologies: ["java"],
+      technologies: ["Java"],
     },
   ],
 
@@ -371,7 +371,7 @@ export const data = {
         "Teaching Spring Boot is not about generating controllers. It is about architecture: layered design, validation, security, JPA relationships, and writing backend systems that remain maintainable years later.",
       creationDate: new Date("2026-05-27"),
       thumbnail: "https://picsum.photos/400",
-      tags: ["spring-boot", "java", "backend"],
+      tags: ["spring-boot", "Java", "backend"],
     },
     {
       id: 7,

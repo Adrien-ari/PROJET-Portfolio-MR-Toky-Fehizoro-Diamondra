@@ -23,7 +23,7 @@ main {
     background-color: var(--color-bg-warm);
     height: 50vh;
     width: 100%;
-    
+
 }
 
 .flags,
@@ -62,7 +62,7 @@ main {
 }
 
 .displayCart {
-   display: none;
+    display: none;
 }
 
 .commonClassCInstance {
@@ -176,12 +176,88 @@ main {
     box-shadow: 0px 0px 20px rgba(220, 220, 220, 0.482);
 }
 
+.cart {
+    background-color: var(--color-bg-white);
+    position: absolute;
+    right: 1%;
+    top: 100%;
+    padding: var(--padding);
+    width: 20%;
+    border-radius: var(--border-radius);
+}
+
+
+.cartHeader {
+    justify-content: space-between;
+    display: flex;
+    padding: calc(var(--padding) / 2);
+}
+
+.confirmOrder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: var(--padding);
+}
+
+.sumOrder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+    padding: calc(var(--padding) / 2);
+    border-block-start: 1px solid var(--color-bg-warm);
+    width: 100%;
+}
+
+.confirmOrderButton {
+    padding-inline: var(--padding);
+    padding-block: calc(var(--padding) / 2);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-red);
+    background-color: var(--color-red);
+    color: var(--color-text-white);
+}
+.cartNone {
+    display: none;
+}
+
+.commandContainer div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: calc(var(--padding) / 1.5);
+}
+
+.commandTitle {
+    text-wrap: nowrap;
+    width: 50%;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+}
+
 .addCart {
     background-color: var(--color-red);
     color: var(--color-text-white);
-    border: none;
+    border: 1px solid var(--color-red);
+    transition:background-color color border 100ms ease-in-out;
+    cursor: pointer;
+}
+.addCart:hover {
+    background-color: var(--color-bg-warm);
+    border: 1px solid var(--color-red);
+    color: var(--color-red);
 }
 
 .cardFiltered {
     display: none;
+}
+
+.confirmationMessage {
+    background-color: rgb(26, 161, 91);
+    color: var(--color-text-white);
+    padding: var(--padding);
+    border-radius: var(--border-radius);
+    text-align: center;
 }
