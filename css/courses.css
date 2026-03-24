@@ -64,6 +64,9 @@ main {
 .displayCart {
     display: none;
 }
+.buttonCTAAdded a{
+    text-decoration: none;
+}
 
 .commonClassCInstance {
     display: flex;
