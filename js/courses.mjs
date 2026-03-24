@@ -267,3 +267,12 @@ document.querySelector(".confirmOrderButton").addEventListener("click", () => {
     );
 
 });
+
+document.querySelector('.clear').addEventListener('click', ()=>{
+  let courseInstances = document.querySelectorAll('.commonClassCInstance');
+  courseInstances.forEach(
+    element => {
+      element.classList.remove('cardFiltered');
+    }
+  )
+})
